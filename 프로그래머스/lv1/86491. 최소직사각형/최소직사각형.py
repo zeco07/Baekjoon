@@ -1,9 +1,9 @@
 def solution(sizes):
     w = []
     h = []
-    for i in range(len(sizes)):
-        if sizes[i][0] < sizes[i][1]:
-            sizes[i][1], sizes[i][0] = sizes[i][0], sizes[i][1]
-        w.append(sizes[i][0])
-        h.append(sizes[i][1])
+    for a, b in sizes:
+        if a < b:
+            a, b = b, a
+        w.append(a)
+        h.append(b)
     return max(w)*max(h)
