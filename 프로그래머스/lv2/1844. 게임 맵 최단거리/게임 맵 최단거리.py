@@ -2,7 +2,6 @@ from collections import deque
 
 def solution(maps):
     n, m = len(maps), len(maps[0])
-    
     visited = [[False] * m for _ in range(n)]
     q = deque()
     q.append([0,0])
@@ -20,6 +19,7 @@ def solution(maps):
                 visited[nx][ny] = True
                 maps[nx][ny] = maps[x][y] + 1
                 q.append([nx,ny])
+                
     if maps[n-1][m-1] == 1:
         return -1
     else:
