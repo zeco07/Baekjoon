@@ -9,5 +9,8 @@ for i in range(len(li)):
         if j != 0 and j <= K:
             count += 1
         elif j != 0 and j > K:
-            count += j//K+1
+            if j%K == 0:
+                count += j//K
+            else:
+                count += j//K+1
 print(count)
