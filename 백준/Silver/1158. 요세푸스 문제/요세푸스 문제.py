@@ -9,5 +9,7 @@ while (people):
     ans.append(people.pop(idx))
     idx += k-1
 
-formatted_list = "<" + ", ".join(map(str, ans)) + ">"
-print(formatted_list)
+# formatted_list = "<" + ", ".join(map(str, ans)) + ">"
+# print(formatted_list)
+
+print(str(ans).replace('[','<').replace(']','>'))
