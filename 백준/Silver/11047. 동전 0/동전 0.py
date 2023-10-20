@@ -12,5 +12,4 @@ for i in reversed(range(n)):
         break
     cnt += k // a[i]
     k %= a[i]
-
 print(cnt)
